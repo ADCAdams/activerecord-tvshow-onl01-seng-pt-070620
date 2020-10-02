@@ -21,10 +21,8 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    array = []
-    self.where("rating > 5").each do |show|
-      array << show 
-    end
-    array
+
+    self.where("rating > 5")
+
   end
 end
